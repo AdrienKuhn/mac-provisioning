@@ -16,6 +16,7 @@ brew "httpie"
 brew "jq"
 brew "n"
 brew "nmap"
+brew "pinentry-mac"
 brew "thefuck"
 brew "wget"
 brew "yarn", args: ["without-node"]

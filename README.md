@@ -37,6 +37,7 @@
 - nmap
 - osxfuse
 - pgcli
+- pinentry-mac
 - postgresql@9.6
 - postman
 - psequel
@@ -81,6 +82,7 @@
 - nordvpn
 - osxfuse
 - postman
+- pinentry-mac
 - sequel-pro
 - spotify
 - srm

@@ -53,6 +53,19 @@ EOM
 
   fi
 
+  # If pinentry-mac is installed but not enabled, enable it
+  if brew list | grep pinentry-mac > /dev/null; then
+    if ! grep -q "pinentry-program" ~/.gnupg/gpg-agent.conf; then
+      cat >> ~/.gnupg/gpg-agent.conf <<- EOM
+# Connects gpg-agent to the OSX keychain via the brew-installed$
+# pinentry program from GPGtools. This is the OSX 'magic sauce',$
+# allowing the gpg key's passphrase to be stored in the login$
+# keychain, enabling automatic key signing.$
+pinentry-program /usr/local/bin/pinentry-mac
+EOM
+    fi
+  fi
+
   echo "\033[0;34mDone! \033[0m"
 else
   echo "\033[0;31mHomebrew is not installed! \033[0m"
