@@ -31,8 +31,8 @@
 - jq
 - khell/srm/srm
 - libxmlsec1
+- mariadb
 - mycli
-- mysql
 - n
 - nmap
 - osxfuse
